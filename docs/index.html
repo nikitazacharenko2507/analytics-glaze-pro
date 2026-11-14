@@ -56,6 +56,11 @@ section{margin-bottom:48px;scroll-margin-top:90px}.section-head{display:flex;jus
 .comparison-heading{padding:34px 36px;margin-bottom:24px;border-radius:24px;background:var(--navy);color:#fff}
 .comparison-heading .eyebrow{color:#e7b2c3}.comparison-heading h2{font-size:clamp(34px,4.5vw,52px);color:#fff;margin:10px 0 12px}.comparison-heading p{color:#ead0d8;margin:0;font-size:15px}
 @media(max-width:650px){.comparison-section{margin-top:48px}.comparison-heading{padding:27px 24px;border-radius:20px}.comparison-heading h2{font-size:34px}}
+/* Keep the mobile header anchored to the viewport, including iPhone safe areas. */
+@media screen and (max-width:650px){
+  body{padding-top:calc(66px + env(safe-area-inset-top,0px))}
+  .nav{position:fixed;top:0;left:0;right:0;width:100%;padding-top:env(safe-area-inset-top,0px);z-index:50;-webkit-backdrop-filter:blur(14px)}
+}
 </style></head><body>
     <header class="nav"><div class="wrap nav-inner"><a class="brand" href="#top"><span>yulia_kolas</span></a>
     <nav><a href="#geo-0">Направления</a><a href="#geography">Сравнение ГЕО</a><a href="#overview">Результаты</a></nav></div></header>
